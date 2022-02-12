@@ -58,8 +58,8 @@
         });
     //}
               // <h1> User1: </h1>
-               var ref = firebase.database().ref("Message"); 
-               ref.on("value", function(snapshot) {
+               var ref1 = firebase.database().ref("Message"); 
+               ref1.on("value", function(snapshot) {
                snapshot.forEach(function(element) {
                document.querySelector('#root').innerHTML +=`
                <div>${element.val()}<\div>
@@ -75,8 +75,8 @@
         });
     //}
              //  <h1> User2: </h1>
-               var ref = firebase.database().ref("Message"); 
-               ref.on("value", function(snapshot) {
+               var ref2 = firebase.database().ref("Message"); 
+               ref2.on("value", function(snapshot) {
                snapshot.forEach(function(element) {
                document.querySelector('#root').innerHTML +=`
                <div>${element.val()}<\div>
