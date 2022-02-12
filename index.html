@@ -54,8 +54,8 @@
       //add function 
       function sendMessage1() {
         firebase.database().ref("Message").set({
-            1Name: "User1", 
-            2Message: document.getElementById ("messageField1").value
+            a_Name: "User1", 
+            b_Message: document.getElementById ("messageField1").value
         }); 
        }   
      
@@ -72,8 +72,8 @@
         
         function sendMessage2() {
         firebase.database().ref("Message").set({
-            Name: "User2",
-            Message: document.getElementById ("messageField2").value
+            a_Name: "User2",
+            b_Message: document.getElementById ("messageField2").value
         });
     }
                // <h1> User2: </h1>
