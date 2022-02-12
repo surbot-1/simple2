@@ -53,10 +53,10 @@
       //add function 
       function sendMessage1() {
         firebase.database().ref("Message").set({
-            User1: document.getElementById("messageField1").value //,
+            User1: document.getElementById("messageField1").value 
            // User2: document.getElementById ("messageField2").value
         });
-    //}
+    }
               // <h1> User1: </h1>
                var ref1 = firebase.database().ref("Message"); 
                ref1.on("value", function(snapshot) {
@@ -66,15 +66,15 @@
                `
                 });
                });
-           }  
+         // }  
         
         function sendMessage2() {
         firebase.database().ref("Message").set({
           //  User1: document.getElementById("messageField1").value,
             User2: document.getElementById ("messageField2").value
         });
-    //}
-             //  <h1> User2: </h1>
+    }
+          /*   //  <h1> User2: </h1>
                var ref2 = firebase.database().ref("Message"); 
                ref2.on("value", function(snapshot) {
                snapshot.forEach(function(element) {
@@ -83,7 +83,7 @@
                `
                 });
                });
-           }  
+          // }  */
         
     </script>
 
