@@ -12,6 +12,16 @@
     <br>
     <input type="text" placeholder="User2" id="messageField2">
     <button onclick = "sendMessage2()"> Send </button>
+    <br>
+    <form>
+         Message <br />
+         <textarea rows = "5" cols = "50" id="messageField3">
+            Text. .. 
+         </textarea>
+
+      </form>
+    
+    <button onclick = "sendMessage3()"> Send </button>
     <br><br>
     
     <div id="root"<\div>
@@ -74,6 +84,12 @@
         firebase.database().ref("Message").set({
             a_Name: "User2",
             b_Message: document.getElementById ("messageField2").value
+        });
+    }
+        function sendMessage3() {
+        firebase.database().ref("Message").set({
+            a_Name: "User3",
+            b_Message: document.getElementById ("messageField3").value
         });
     }
                // <h1> User2: </h1>
