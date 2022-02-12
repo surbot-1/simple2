@@ -77,9 +77,9 @@
         });
     }
                // <h1> User2: </h1>
-               var ref2 = firebase.database().ref("Message"); 
-               ref2.on("value", function(childSnapshot) {
-               childSnapshot.forEach(function(element) {
+               var ref = firebase.database().ref("Message").child(child); 
+               ref.on("value", function(snapshot) {
+               snapshot.forEach(function(element) {
                document.querySelector('#root').innerHTML +=`
                <div>${element.val()}<\div>
                ` 
