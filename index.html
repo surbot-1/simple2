@@ -21,7 +21,10 @@
 
       </form>
     <button onclick = "sendMessage3()"> Send </button>
-    
+    <button onclick = "sendMessage4()"> Send </button>
+    <button onclick = "sendMessage5()"> Send </button>
+    <button onclick = "sendMessage6()"> Send </button>
+    <button onclick = "sendMessage7()"> Send </button>
     <br><br>
     
     <div id="root"<\div>
@@ -90,6 +93,30 @@
         firebase.database().ref("Message").set({
             a_Name: "User3",
             b_Message: document.getElementById ("messageField3").value
+        });
+    }
+        function sendMessage4() {
+        firebase.database().ref("Message").set({
+            a_Name: "User4",
+            b_Message: document.getElementById ("messageField4").value
+        });
+    }
+        function sendMessage5() {
+        firebase.database().ref("Message").set({
+            a_Name: "User5",
+            b_Message: document.getElementById ("messageField5").value
+        });
+    }
+        function sendMessage6() {
+        firebase.database().ref("Message").set({
+            a_Name: "User6",
+            b_Message: document.getElementById ("messageField6").value
+        });
+    }
+        function sendMessage7() {
+        firebase.database().ref("Message").set({
+            a_Name: "User7",
+            b_Message: document.getElementById ("messageField7").value
         });
     }
                // <h1> User2: </h1>
