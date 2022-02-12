@@ -7,9 +7,11 @@
     <title>My Firebase Tutorial</title>
 </head>
 <body>
-    <input type="text" placeholder="name" id="nameField">
-    <input type="text" placeholder="age" id="ageField">
-    <button onclick = "writeData()"> Submit </button>
+    <input type="text" placeholder="message" id="messageField1">
+    <button onclick = "sendMessage1()"> Submit </button>
+
+    <input type="text" placeholder="message" id="messageField2">
+    <button onclick = "sendMessage2()"> Submit </button>
 
     <div id="root"<\div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -49,14 +51,14 @@
       firebase.analytics();
 
       //add function 
-      function writeData() {
-        firebase.database().ref("User").set({
-            Name: document.getElementById("nameField").value,
-            Age: document.getElementById ("ageField").value
+      function sendMessage1() {
+        firebase.database().ref("Message").set({
+            User1: document.getElementById("messageField1").value,
+            User2: document.getElementById ("messageField2").value
         });
-      }
+    //  }
             // <div id="root"<\div>
-               var ref = firebase.database().ref("User"); 
+               var ref = firebase.database().ref("Message"); 
                ref.on("value", function(snapshot) {
                snapshot.forEach(function(element) {
                document.querySelector('#root').innerHTML +=`
@@ -64,7 +66,7 @@
                `
                 });
                });
-                   
+           }        
     </script>
 
     
