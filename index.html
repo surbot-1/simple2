@@ -7,10 +7,10 @@
     <title>My Firebase Tutorial</title>
 </head>
 <body>
-    <input type="text" placeholder="message" id="messageField1">
+    <input type="text" placeholder="message1" id="messageField1">
     <button onclick = "sendMessage1()"> Submit </button>
     <br>
-    <input type="text" placeholder="message" id="messageField2">
+    <input type="text" placeholder="message2" id="messageField2">
     <button onclick = "sendMessage2()"> Submit </button>
 
     <div id="root"<\div>
@@ -57,7 +57,7 @@
            // User2: document.getElementById ("messageField2").value
         });
     }
-              // <h1> User1: </h1>
+               <h1> User1: </h1>
                var ref1 = firebase.database().ref("Message"); 
                ref1.on("value", function(snapshot) {
                snapshot.forEach(function(element) {
