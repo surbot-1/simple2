@@ -120,7 +120,7 @@
         });
     }
                // <h1> User2: </h1>
-               var ref = firebase.database().ref("Message").child("User1"); 
+               var ref = firebase.database().ref("Message/User1"); 
                ref.on("value", function(snapshot) {
                snapshot.forEach(function(element) {
                document.querySelector('#root').innerHTML +=`
