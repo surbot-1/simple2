@@ -84,7 +84,7 @@
             */
         
         function sendMessage2() {
-        firebase.database().ref("Message").set({
+        firebase.database().ref("Message").child("User2").set({
             a_Name: "User2",
             b_Message: document.getElementById ("messageField2").value
         });
