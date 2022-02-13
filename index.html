@@ -25,6 +25,7 @@
     <button onclick = "sendMessage5()"> Send </button>
     <button onclick = "sendMessage6()"> Send </button>
     <button onclick = "sendMessage7()"> Send </button>
+    <button onclick = "sendMessage8()"> Send </button>
     <br><br>
     
     <div id="root"</div>
@@ -116,6 +117,12 @@
         function sendMessage7() {
         firebase.database().ref("Message").child("User7").set({
             a_Name: "User7",
+            b_Message: document.getElementById ("messageField3").value
+        });
+    }
+        function sendMessage8() {
+        firebase.database().ref("Message").child("User7").set({
+            a_Name: "User8",
             b_Message: document.getElementById ("messageField3").value
         });
     }
